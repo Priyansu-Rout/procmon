@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    long hz = sysconf(_SC_CLK_TCK);          /* usually 100 */
+    long hz = sysconf(_SC_CLK_TCK);          
 
     for (;;) {
         int n1 = snapshot(before);

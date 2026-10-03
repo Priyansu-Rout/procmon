@@ -8,14 +8,14 @@ typedef struct {
     char name[64];
     char state;
     long rss_kb;
-    unsigned long long ticks;   /* utime + stime */
-    double cpu;                 /* percent */
+    unsigned long long ticks;   
+    double cpu;                 
 } Proc;
 
-int  read_proc(int pid, Proc *p);                  /* read one process */
-int  snapshot(Proc *arr);                          /* scan all of /proc */
+int  read_proc(int pid, Proc *p);                  
+int  snapshot(Proc *arr);                          
 void calc_cpu(Proc *before, int n1, Proc *after, int n2, long hz);
 void sort_by_cpu(Proc *arr, int n);
-int  kill_process(int pid);                        /* 0 = success */
+int  kill_process(int pid);                        
 
 #endif
