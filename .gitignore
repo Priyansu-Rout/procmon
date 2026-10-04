@@ -1,0 +1,4 @@
+   *.o
+   procmon
+   test_proc
+   procmon.log
